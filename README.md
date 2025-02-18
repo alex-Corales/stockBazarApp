@@ -6,7 +6,7 @@ El objetivo de esta API es gestionar las operaciones de un bazar, permitiendo re
 
 ## Tecnologías
 
-- **Backend:** Java, Spring Boot
+- **Backend:** Java 17, Spring Boot
 - **Frameworks:** Spring Data JPA, Spring Web
 - **Base de Datos:** MySQL
 - **Otros:** DTOs para transferencia de datos
