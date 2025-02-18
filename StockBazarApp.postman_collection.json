@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "2ceaaa61-afb9-4292-85b9-f3853d1ab148",
+		"name": "StockBazarApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24318579"
+	},
+	"item": [
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/productos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/productos"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/productos/1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/productos/1"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/productos/crear",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Talca Cola 500ml\",\r\n    \"marca\": \"Talca\",\r\n    \"costo\": 200.00,\r\n    \"cantidadDisponible\": 100\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/productos/crear"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/productos/editar/2",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Pepsi cola 500ml\",\r\n    \"marca\": \"Pepsi\",\r\n    \"costo\": 245.00,\r\n    \"cantidadDisponible\": 100\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/productos/editar/2"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/productos/eliminar/3",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/productos/eliminar/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/clientes",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/clientes"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/clientes/1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/clientes/1"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/clientes/crear",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Alex\",\r\n    \"apellido\": \"Corales\",\r\n    \"dni\": 42125797\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/clientes/crear"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/clientes/editar/1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Braian Alejo\",\r\n    \"apellido\": \"Corales\",\r\n    \"dni\": 43123517\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/clientes/editar/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Venta",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/ventas",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/ventas"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/ventas/1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/ventas/2"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/ventas/crear",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaVenta\": \"2025-02-17\",\r\n    \"total\": 750.00,\r\n    \"listaProductos\": [\r\n        {\r\n            \"codigoProducto\": 1\r\n        }\r\n    ],\r\n    \"cliente\": {\r\n        \"idCliente\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/ventas/crear"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/ventas/eliminar/5",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/ventas/eliminar/5"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/ventas/editar/1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/ventas/editar/1"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/ventas/productos/6",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/ventas/productos/6"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/ventas/fecha/2025-02-17",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/ventas/fecha/2025-02-17"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/ventas/mayor_venta",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/ventas/mayor_venta"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
